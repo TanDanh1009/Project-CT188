@@ -265,7 +265,7 @@ function Validator(options) {
         return !errorMessage;
     }
     //----------------------------------
-    console.log(123123132)
+    console.log(12312313)
     // lấy element của form cần validte
     var formElement = document.querySelector(options.form);
     if (formElement) {

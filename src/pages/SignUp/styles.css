@@ -1,82 +1,81 @@
-body{
+.form-body{
     background-image: url('../../assets/images/Sign/hinhnen6.jpg');
+    font-family: Arial, sans-serif;
     margin: auto;
     /* background-position: 55% 45%; */
     background-position: 100% 0%;
     background-size: cover;
 }
-
 /* ---------------------------------- */
-body{
+.form-body{
     display: grid;
     grid-template-areas: 
     "heading"
     "middle";
 }
-.heading{
+.form-heading{
     margin-top: 80px;
     grid-area: heading;
     font-size: 50px;
     text-align: center;
 }
-main{
+.form-wrap{
+    grid-gap: 20px;
     grid-area: middle;
     display: grid;
-    /* margin: 50px 25% 10%; */
-    /* margin-top: 80px; */
-}
-/* giao dien may tinh  dk*/
 
-@media  (min-width:700px) {
-    main{
-        margin: 5px 20% auto;
-        grid-template-areas: 
-        "cotform";
-    }
-    main.m1{
+}
+
+/* -----giao dien may tinh > 700px-------- */
+
+@media screen and (min-width:700px) {
+    .m1{
         margin: 5px 10% auto;
         grid-template-areas: 
         "cotnd cotform";
     }
-    .cot-form{margin-bottom: 150px;}
-    .cot-nd{display: 150px;}
-    main.m2{
+    .m2{
         margin: 5px 10% auto;
         grid-template-areas: 
         "cotform cotnd";
     }
+    .m3{
+        margin: 5px 20% auto;
+        grid-template-areas: 
+        "cotform";
+    }
+    .cot-form{margin-bottom: 150px;}
+    .cot-nd{display: 150px;}
 }
-/* giao dien may tinh */
-@media  (min-width:1000px) {
-    main{
+
+/* --------giao dien may tinh > 100px ------------- */
+@media screen and (min-width:1000px) {
+    .m1{
+        margin: 5px 20% auto;
+        grid-template-areas: 
+        "cotnd cotform";
+    }
+    .m2{
+        margin: 5px 20% auto;
+        grid-template-areas: 
+        "cotform cotnd";
+    }
+    .m3{
         margin: 5px 35% auto;
         grid-template-areas: 
         "cotform";
     }
     .cot-form{margin-bottom: 150px;}
     .cot-nd{display: 150px;}
-    main.m1{
-        margin: 5px 20% auto;
-        grid-template-areas: 
-        "cotnd cotform";
-    }
-    .cot-form{margin-bottom: 150px;}
-    .cot-nd{display: 150px;}
-    main.m2{
-        margin: 5px 20% auto;
-        grid-template-areas: 
-        "cotform cotnd";
-    }
 }
 
-/*  giao dien dien thoai */
-@media  (max-width:700px) {
-    .heading{ font-size: 40px;}
-    main{
+/* ----------- giao dien dien thoai--------------- */
+@media screen and (max-width:700px) {
+    .form-heading{ font-size: 35px;}
+    .form-wrap{
         margin: 5px 5% auto;
         grid-template-areas:
-        "cotform";
-        
+        "cotform"; 
     }
     .cot-form{margin-bottom: 150px;}
     .cot-nd{display: none;}
@@ -91,7 +90,6 @@ main{
 }
 
 .cot-form{
-    /* margin-bottom: 200px; */
     grid-area: cotform;
     padding: 32px 24px;
     border-radius: 25px;
@@ -111,14 +109,23 @@ main{
     text-align: center;
 }
 /* ---------quen mk, icon-------- */
-.fa-brands{
+.form-icon{
     color: #FFA45D;
 }
-.icon > a{
+.ic-facebook:hover{
+    color: blue;
+}
+.ic-google:hover{
+    color:red;
+}
+.ic-x-twitter:hover{
+    color:black;
+}
+.form-icon > a{
     padding: 0 25px;
     font-size: 25px;
 }
-.icon{
+.form-icon{
     text-align: center;
 }
 .quenmk{
@@ -126,6 +133,10 @@ main{
     text-align: right;
 }
 /* --------------------------------------- */
+.form-group{
+    margin-bottom: 3px;
+}
+
 
 .form-message {
     text-align: left;
@@ -136,7 +147,7 @@ main{
 .form-control{
     width: 100%;
     padding: 10px;
-    margin-bottom: 3px;
+    /* margin-bottom: 3px; */
     border: 1px solid #ccc;
     border-radius: 25px;
 }
@@ -155,7 +166,7 @@ main{
 }
 /*----------button-------------*/
 button {
-    margin-top: 8px;
+    margin-top: 3px;
     width: 100%;
     padding: 10px;
     background-color: #FFcdac;
@@ -181,11 +192,11 @@ button:hover {
     background-color: #FFA45D;
     color:black;
 }
+
 /* --------quên mật khẩu------------ */
-.quenMK{
+/* .quenMK{
     padding: 5px;
     font-size: 20px;
-}
+} */
 
 
-/* Chinh  *
